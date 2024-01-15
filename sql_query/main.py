@@ -18,6 +18,13 @@ def main():
     prompt = input("Enter your question: ")
     
     # connect to postgres db and get all tables name and schema
+    with PostgresManager(DB_URL) as db_manager:
+        tables = db_manager.get_all_tables()
+        print(f"All tables: {tables}")
     
     # get all tables definition
+    for table in tables:
+        with PostgresManager(DB_URL) as db_manager:
+            table_definition = db_manager.get_table_definition(table)
+            print(f"Definition of {table}: {table_definition}")
     
