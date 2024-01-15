@@ -1,0 +1,7 @@
+openai
+python-dotenv
+psycopg2-binary
+pandas
+sqlalchemy
+snowflake-connector-python[pandas]
+snowflake-snowpark-python
