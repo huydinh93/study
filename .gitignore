@@ -138,4 +138,4 @@ cython_debug/
 postgres-data/
 node_modules/
 screenshots/
-```
+OAI_CONFIG_LIST.json
